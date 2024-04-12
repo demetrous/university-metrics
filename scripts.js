@@ -247,40 +247,40 @@ const smoothScroll = () => {
     });
 };
 
-updateAll = () => {
-  //fetch('https://secret-basin-35762.herokuapp.com/')
-  //fetch('http://ia-msiis-wsd-01.ad.unlv.edu/rest-tut')
-  //fetch('http://ia-msiis-wsd-01.ad.unlv.edu/university-metrics-api')
-  //fetch('https://ir.unlv.edu/university-metrics-api')
-  //fetch('http://localhost:3500/')
-  //fetch('https://localhost:7000/api/GoogleSheets')
-  //fetch('https://ir.unlv.edu/university-metrics-api')
-  //fetch('https://ia-msiis-wsd-01.ad.unlv.edu/GoogleSheetsApi/api/GoogleSheets')
-  fetch("https://ir.unlv.edu/UniversityMetricsGoogleSheetsApi/api/GoogleSheets")
-    .then((result) => {
-      return result.json();
-    })
-    .then((response) => {
-      var data = response.value;
+// updateAll = () => {
+//   //fetch('https://secret-basin-35762.herokuapp.com/')
+//   //fetch('http://ia-msiis-wsd-01.ad.unlv.edu/rest-tut')
+//   //fetch('http://ia-msiis-wsd-01.ad.unlv.edu/university-metrics-api')
+//   //fetch('https://ir.unlv.edu/university-metrics-api')
+//   //fetch('http://localhost:3500/')
+//   //fetch('https://localhost:7000/api/GoogleSheets')
+//   //fetch('https://ir.unlv.edu/university-metrics-api')
+//   //fetch('https://ia-msiis-wsd-01.ad.unlv.edu/GoogleSheetsApi/api/GoogleSheets')
+//   fetch("https://ir.unlv.edu/UniversityMetricsGoogleSheetsApi/api/GoogleSheets")
+//     .then((result) => {
+//       return result.json();
+//     })
+//     .then((response) => {
+//       var data = response.value;
 
-      $("#loaderDiv").remove();
+//       $("#loaderDiv").remove();
 
-      combineTableChat(data, 0);
-      combineTableChat(data, 1);
+//       combineTableChat(data, 0);
+//       combineTableChat(data, 1);
 
-      combineTableChat(data, 2, true);
-      combineTableChat(data, 3, true);
-      combineTableChat(data, 4, true);
-      combineTableChat(data, 5, true);
+//       combineTableChat(data, 2, true);
+//       combineTableChat(data, 3, true);
+//       combineTableChat(data, 4, true);
+//       combineTableChat(data, 5, true);
 
-      combineTableChat(data, 6);
+//       combineTableChat(data, 6);
 
-      combineTableChat(data, 7);
+//       combineTableChat(data, 7);
 
-      rebuildRightMenuHeaders();
-      smoothScroll();
-    });
-};
+//       rebuildRightMenuHeaders();
+//       smoothScroll();
+//     });
+// };
 
 updateAllLocalDS = () => {
   var data = UMData;
