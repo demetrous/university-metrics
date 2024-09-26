@@ -83,7 +83,7 @@ body {
 
 #navbar-main.navbar {
   /*line-height: 1;*/
-  background: rgba(177, 2, 2, 0.92) url("header-texture.png") repeat no-repeat left top;
+  background: rgba(2, 95, 177, 0.92) url("./header-texture.png") repeat no-repeat left top;
   background-size: 45px;
   box-shadow: 2px 2px 24px 8px rgba(0, 0, 0, 0.1) inset;
   color: #ddd;
@@ -436,7 +436,7 @@ table tr[class^="level-"]:hover {
     margin-bottom: 120px;
   height: 80vh;*/
   width: 100%;
-  background-image: url(../img/LandPageBackground.jpg);
+  background-image: url(/files/LandPageBackground.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 60%;
@@ -455,7 +455,7 @@ table tr[class^="level-"]:hover {
     color: rgb(255, 255, 255);
     display: none;
     font-family: Roboto, san-serif;
-    font-size: 4em;
+    font-size: 3em;
     font-stretch: normal;
     font-style: normal;
     font-variant: normal;
@@ -481,13 +481,12 @@ table tr[class^="level-"]:hover {
     font-size: 1.5em;
     font-stretch: normal;
     font-style: normal;
-    font-variant: normal;
     font-weight: 300;
     line-height: normal;
     margin: 0 auto 2rem auto;
     position: static;
     /* text-align: center; */
-    text-shadow: rgba(0, 0, 0, 0.8) 1px 1px 0px;
+    text-shadow: rgb(0 0 0) 0px 2px 5px;
     white-space: normal;
   }
 
@@ -515,9 +514,9 @@ table tr[class^="level-"]:hover {
 
     .intro p,
     .office-intro p {
-      font-size: 1.3rem;
+      font-size: 2rem;
       flex: 0 0 68%;
-      max-width: 68%;
+      max-width: 80%;
     }
 }
 
@@ -549,13 +548,13 @@ table tr[class^="level-"]:hover {
 }
 
 .intro-container {
-  max-width: 1216px;
+  max-width: 1350px;
 }
 
   .intro-container p a {
     color: inherit;
     font-weight: 100;
-    font-size: 0.7em;
+    /* font-size: 0.7em; */
     border-radius: 0 !important;
   }
 
@@ -933,7 +932,8 @@ strong {
 
 h1,
 .h1 {
-  font-size: 2rem;
+  /* font-size: 2rem; */
+  /* margin-top: 48px; */
 }
 
 h2,
@@ -1345,4 +1345,28 @@ button.btn.btn-link.bd-search-docs-toggle.p-0 {
 .content.diversity-index-staff-stud-cat { /*customize the last class for each individual page*/
     height: 23000px;
     padding-bottom: 160px;
+}
+
+.intro-text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  /* background: url("./LandPageBackground.jpg") no-repeat center
+    center;   */
+  background: url("/img/LandPageBackground.jpg") no-repeat center
+    center;
+    background: url("/img/FDH.jpg") no-repeat center
+    center;
+  background-size: cover;
+  transform-origin: center center 0;
+  /* transform: translateZ(-1px) scale(2); Parallax doesn't work ;(   */
+  z-index: -1;
+  /* min-height: 100vh;*/
+  width: 100vw;
+  margin-top: 101px;
+
 }
